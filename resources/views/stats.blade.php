@@ -24,14 +24,34 @@
 	</div>
 </div>
 <div class="container mt-2">
-	<div class="row white no-gutters col-relax col-inrelax p-2">
+	<div class="row white no-gutters col-relax col-inrelax p-2 mt-2">
 		<div class="col-6">
-			More Villagers
-			<hr>
-			<p class="grey-text">In process</p>
+			<p class="low-bold">Mongolian Village</p>
+			<hr class="my-1" style="width:95%;">
+			<p class="grey-text little-bold">In process</p>
 		</div>
 		<div class="col-6">
-			<button type="button" class="btn orange">More details</button>
+			<button type="button" class="btn orange w-100 white-text" style="position: absolute;bottom: 0;">More details</button>
+		</div>
+	</div>
+	<div class="row white no-gutters col-relax col-inrelax p-2 mt-2">
+		<div class="col-6">
+			<p class="low-bold">Mongolian Village</p>
+			<hr class="my-1" style="width:95%;">
+			<p class="grey-text little-bold">In process</p>
+		</div>
+		<div class="col-6">
+			<button type="button" class="btn orange w-100 white-text" style="position: absolute;bottom: 0;">More details</button>
+		</div>
+	</div>
+	<div class="row white no-gutters col-relax col-inrelax p-2 mt-2">
+		<div class="col-6">
+			<p class="low-bold">Mongolian Village</p>
+			<hr class="my-1" style="width:95%;">
+			<p class="grey-text little-bold">In process</p>
+		</div>
+		<div class="col-6">
+			<button type="button" class="btn orange w-100 white-text" style="position: absolute;bottom: 0;">More details</button>
 		</div>
 	</div>
 </div>
