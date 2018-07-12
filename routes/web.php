@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/redirect', 'Team8Controller@splash');
+Route::get('/post/{id}', 'Team8Controller@post');
+Route::get('/home', 'Team8Controller@home');
+Route::get('/profile', 'Team8Controller@profile');
+Route::get('/stats', 'Team8Controller@statistic');
+
+Auth::routes();
+//Route::get('/home', 'HomeController@index')->name('home');
