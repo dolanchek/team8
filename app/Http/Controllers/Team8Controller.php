@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request;
+use Illuminate\Routing\Controller;
 
 class Team8Controller extends Controller
 {
     public function slash(){
         return redirect('redirect');
     }
-    public function post($id){
-        return view('post');
+    public function post(Request $request,$id){
+        $name = $request::url();
+        return view('post',$name);
     }
     public function home(){
         return view('home');
