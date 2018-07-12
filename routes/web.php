@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('/', 'Team8Controller@slash');
 Route::get('/redirect', 'Team8Controller@splash');
 Route::get('/post/{id}', 'Team8Controller@post');
 Route::get('/home', 'Team8Controller@home');
