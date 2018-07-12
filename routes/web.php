@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/post/{id}', 'Team8Controller@post');
+Route::get('/home', 'Team8Controller@home');

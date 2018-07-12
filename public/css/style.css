@@ -1,0 +1,55 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	/*
+	  font-family: 'Roboto',Arial, sans-serif;
+	  font-family: 'Ubuntu',Arial, sans-serif;
+	  font-family: 'Oswald', sans-serif;
+	*/
+}
+html{
+	height:100%;
+}
+body{
+	height:100%;
+}
+.btn-larger{
+  width: 5vh;
+  height: 5vh;  
+  line-height: 25rem;
+  border-radius: 50%;
+}
+.red{
+	background-color: tomato;
+}
+.green{
+	background-color: limegreen;
+}
+.yellow{
+	background-color: gold;
+}
+.parent_bar{
+	height:4rem;
+	background:#eee;
+}
+.sidebar{
+	height:50%;
+	width:96%;
+	margin-left:2%;
+	background-color: orange;
+	border-radius: 1rem;
+}
+.lightgrey{
+	background-color: lightgrey;
+}
+.carousel{
+	height:33vh;
+	overflow: hidden;
+}
+.don-category{
+	height:2rem;
+	width:100%;
+	background:#eee;
+	padding-left:2vw;
+}
