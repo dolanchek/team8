@@ -14,12 +14,18 @@ html{
 }
 body{
 	height:100%;
-	background-color: #eee !important;
+	background-color: #eaeaea !important;
 	font-family: 'Roboto',Arial, sans-serif;
 	/*/font-family: 'Ubuntu',Arial, sans-serif !important;*/
 }
 p{
 	margin:0 !important;
+}
+.border-r{
+	border-right:2px solid lightgrey !important;
+}
+.border-l{
+	border-left:2px solid lightgrey !important;
 }
 .btn-larger{
   width: 5vh;
@@ -51,7 +57,7 @@ p{
 	background-color: gold;
 }
 .white{
-	background:white;
+	background:white !important;
 }
 .parent_bar{
 	height:4rem;
@@ -86,8 +92,18 @@ p{
 	background:#eee;
 	padding-left:2vw;
 }
+.orange-text{
+	color:orange !important;
+}
+.pb-5{
+}
+.table-relax{
+	border-radius: 0.45rem !important;
+	border-right:2px solid lightgrey !important;
+}
 .col-relax{
-	border-radius: 0.2rem;border-right:2px solid lightgrey;
+	border-radius: 0.2rem !important;
+	border-right:2px solid lightgrey !important;
 }
 .col-inrelax{
 	border-right:none !important;
@@ -119,6 +135,13 @@ p{
 .prof-main{
 	padding-top:1vh;
 	padding-bottom: 1vh;
+}
+.prof-input{
+	width:90%;
+	margin-left: 5%;
+	padding-bottom: 0.7rem;
+	border-bottom:2.5px solid lightgrey;
+	text-align: center;
 }
 .stats-earth{
 	margin:0 auto;

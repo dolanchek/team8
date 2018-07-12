@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
-<nav class="navbar navbar-expand navbar-light bg-light p-0 fixed-bottom sticky-bottom">
+<nav class="navbar navbar-expand navbar-light p-0 fixed-bottom sticky-bottom" style="background:white;border-bottom:#232323 solid 2rem;padding-bottom: 0.25rem !important;padding-top: 0.25rem !important;">
   <div class="row no-gutters w-100">
     <div class="col-4">
       @yield('home')
