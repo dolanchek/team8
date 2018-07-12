@@ -12,13 +12,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#"><button type="button" class="btn-larger red"></button></a>
+        <a class="nav-link" href="/home"><button type="button" class="btn-larger red"></button></a>
       </li>
       <li class="nav-item">
-      	<a class="nav-link" href="#"><button type="button" class="btn-larger yellow"></button></a>
+      	<a class="nav-link" href="/profile"><button type="button" class="btn-larger yellow"></button></a>
       </li>
       <li class="nav-item">
-      	<a class="nav-link" href="#"><button type="button" class="btn-larger green"></button></a>
+      	<a class="nav-link" href="/stats"><button type="button" class="btn-larger green"></button></a>
       </li>
     </ul>
 </nav>

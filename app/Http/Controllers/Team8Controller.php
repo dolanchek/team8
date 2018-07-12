@@ -12,4 +12,13 @@ class Team8Controller extends Controller
     public function home(){
         return view('home');
     }
+    public function profile(){
+        return view('profile');
+    }
+    public function statistic(){
+        return view('stats');
+    }
+    public function splash(){
+        return view('splash_screen');
+    }
 }

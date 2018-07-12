@@ -22,11 +22,19 @@
   </a>
 </div>
 <div class="w-100" category="active">
-  <div class="don-category">
+  <div class="don-category mt-2">
     <h5>В активной разработке</h5>
   </div>
   <div class="post">
-    <img src="" alt="" class="w-25 ml-1 mt-1">
+      <div class="featured-article">
+        <a href="#" class="photo">
+          <img src="http://placehold.it/482x350" alt="" class="thumb">
+        </a>
+        <div class="block-title">
+          <h4>Lorem ipsum dolor asit amet</h4>
+          <p class="by-author"><small>By Jhon Doe</small></p>
+        </div>
+      </div>
   </div>
 </div>
 @endsection
