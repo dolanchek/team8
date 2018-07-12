@@ -11,8 +11,28 @@
 	  </div>
 	  <h6 style="position:absolute;left:45%">70%</h6>
 	</div>
+	<div class="row mt-2" style="width:96%;margin-left:2%;">
+		<div class="col-4 darkgrey-text white col-relax">
+			Сумма
+		</div>
+		<div class="col-4 darkgrey-text white col-relax">
+			Оплачено
+		</div>
+		<div class="col-4 darkgrey-text white col-relax col-inrelax">
+			Меценаты
+		</div>
+		<div class="col-4 mt-1 grey-text white col-relax">
+			50'000 руб.
+		</div>
+		<div class="col-4 mt-1 grey-text white col-relax">
+			42'671 руб.
+		</div>
+		<div class="col-4 mt-1 grey-text white col-relax col-inrelax">
+			14'263 людей
+		</div>
+	</div>
 	<div class="mt-2 p-3 white text-content">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque praesentium, laudantium aspernatur quos doloremque optio distinctio, veniam voluptatum ipsa molestiae quidem aut doloribus animi. Explicabo obcaecati quisquam nobis earum porro?</p>
-		<button type="button" class="btn" style="background-color: #7e2;position:relative;left:38%">Donate</button>
+		<button type="button" class="btn btn-don btn-relax px-9 mt-5 darkgrey-text">Donate</button>
 	</div>
 @endsection
