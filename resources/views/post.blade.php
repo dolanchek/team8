@@ -1,17 +1,18 @@
 @extends('layout.app')
 @section('content')
-	<img src="/images/setwalls.ru-9422.jpg" alt="" class="img-fluid mt-3">
-	<hr>
-	<h3 class="text-center">Монгольская Деревня</h3>
-	<div class="parent_bar">
-		<div class="sidebar">
-			
-		</div>
-		<h6 class="text-center"> Собрано: 50$ из 100'000$</h6>
+	<div class="white mt-2 p-2" style="width:100%">
+		<img src="/images/setwalls.ru-9422.jpg" alt="" class="img-fluid">
 	</div>
-	<p class="w-100 p-3 lightgrey">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error cupiditate sunt mollitia non? Soluta aut ea eveniet quaerat quidem inventore, temporibus blanditiis delectus ut fuga quibusdam voluptate, cum iste consectetur.
-	</p>
-	<hr>
-	<button type="button" class="btn btn-danger" style="margin:0 auto">Donate</button>
+	<h5 class="description text-center p-1 mt-2">Монгольская Деревня</h5>
+	<div class="progress">
+	  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+	  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+	    
+	  </div>
+	  <h6 style="position:absolute;left:45%">70%</h6>
+	</div>
+	<div class="mt-2 p-3 white text-content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque praesentium, laudantium aspernatur quos doloremque optio distinctio, veniam voluptatum ipsa molestiae quidem aut doloribus animi. Explicabo obcaecati quisquam nobis earum porro?</p>
+		<button type="button" class="btn" style="background-color: #7e2;position:relative;left:38%">Donate</button>
+	</div>
 @endsection

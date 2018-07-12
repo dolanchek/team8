@@ -14,12 +14,16 @@ html{
 body{
 	height:100%;
 }
+p{
+	margin:0 !important;
+}
 .btn-larger{
   width: 5vh;
   height: 5vh;  
   line-height: 25rem;
   border-radius: 50%;
 }
+
 #splash{
 	width:100%;
 	height:100%;
@@ -33,6 +37,9 @@ body{
 }
 .yellow{
 	background-color: gold;
+}
+.white{
+	background:white;
 }
 .parent_bar{
 	height:4rem;
@@ -51,6 +58,15 @@ body{
 .carousel{
 	height:33vh;
 	overflow: hidden;
+}
+.description{
+	background-color: white;
+	border-radius:0.2rem;
+	width:94%;
+	margin-left:3%;
+	padding-bottom: 0.25rem;
+	padding-top: 0.25rem;
+	margin-bottom:0.1rem !important;
 }
 .don-category{
 	height:2rem;
@@ -89,9 +105,22 @@ body{
 }
 
 
-
-
-
+.text-content{
+	width: 94% !important;
+	margin-left:3% !important;
+	border-radius: 0.2rem;
+}
+.progress{
+	height:auto !important;
+	background-color: white !important;
+	width:94% !important;
+	margin-left:3% !important;
+	padding:0.2rem;
+	height:1.8rem !important;
+}
+.progress-bar{
+	background:#7e2 !important;
+}
 
 .thumb {
     display: block;
@@ -150,5 +179,5 @@ body{
 	padding-bottom: 1.1em;
 	border-bottom: 1px solid #e8e8e8;
 }
-.photo{
+.photo:{
 }

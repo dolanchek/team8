@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 class Team8Controller extends Controller
 {
+    public function slash(){
+        return redirect('redirect');
+    }
     public function post($id){
         return view('post');
     }

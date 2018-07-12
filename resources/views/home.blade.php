@@ -31,7 +31,7 @@
           <img src="http://placehold.it/482x350" alt="" class="thumb">
         </a>
         <div class="block-title">
-          <h4>Lorem ipsum dolor asit amet</h4>
+          <h6>Lorem ipsum dolor asit amet</h6>
           <p class="by-author"><small>By Jhon Doe</small></p>
         </div>
       </div>
