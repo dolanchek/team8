@@ -19,9 +19,7 @@
     </div>
 </nav>
 <div class="w-100 py-3 mt-3 white">
-	<div class="stats-earth">
-		
-	</div>
+	<img src="/images/earth-png-1600 (1).png" class="stats-earth" alt="">
 </div>
 <div class="container mt-2">
 	<div class="row white no-gutters col-relax col-inrelax p-2 mt-2">

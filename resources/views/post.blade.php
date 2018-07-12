@@ -9,7 +9,8 @@
 <a class="nav-link" href="/stats" style="margin:0 auto;text-align: center"><img src="/images/earth (2).png" class="photo" alt="Profile" style="width:3.5rem;margin-top:0.25rem"></a>
 @endsection
 @section('content')
-	<div class="white mt-2 p-2 secret-photo w-100">
+	<div class="mt-2 secret-photo w-100 row no-gutters">
+		<div class="col-1 no-white secret"></div>
 	</div>
 	<h5 class="description text-center p-1 mt-2">Монгольская Деревня</h5>
 	<div class="progress">
@@ -43,4 +44,36 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque praesentium, laudantium aspernatur quos doloremque optio distinctio, veniam voluptatum ipsa molestiae quidem aut doloribus animi. Explicabo obcaecati quisquam nobis earum porro?</p>
 		<button type="button" class="btn btn-don btn-relax px-9 mt-5 darkgrey-text">Donate</button>
 	</div>
+@include('layout.blank')
+<script>
+	var secretphoto = document.querySelector(".secret-photo");
+	var onesecret = document.querySelector(".secret");
+	var offsetWidth = onesecret.offsetWidth;
+	var a = Math.round(secretphoto.offsetHeight / offsetWidth) * 12;
+	console.log(a);
+	if(Number.isInteger(a / 12) == false){
+		if(a % 12 > 6){
+			console.log("true");
+			a = a + (a % 12);
+			console.log(a);
+		} else {
+			console.log("false");
+			a = a - (a % 12);
+			console.log(a);
+		}
+	}
+	for(var i=0;i < a-1; i++){
+		var div = document.createElement('div');
+		div.className = "col-1 secret no-white";
+
+		secretphoto.appendChild(div);
+	}
+	var secrets = document.querySelectorAll(".secret");
+	for(var i=0;i < secrets.length; i++){
+		secrets[i].style.height = offsetWidth + "px";
+		secrets[i].onclick = function(){
+			this.style.backgroundColor = "green";
+		}
+	}
+</script>
 @endsection
