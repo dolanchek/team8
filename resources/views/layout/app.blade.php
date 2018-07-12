@@ -12,14 +12,13 @@
 <nav class="navbar navbar-expand navbar-light bg-light p-0 fixed-bottom sticky-bottom">
   <div class="row no-gutters w-100">
     <div class="col-4">
-      <? var_dump($name) ?>
-      <!--<a class="nav-link" href="/home" style="margin:0 auto;text-align: center"><img src="/images/smile.png" class="photo" alt="Home"></a>-->
+      @yield('home')
     </div>
     <div class="col-4">
-      <a class="nav-link" href="/profile" style="margin:0 auto;text-align: center"><img src="/images/profile.png" class="photo" alt="Profile" style="width:3.5rem;margin-top:0.25rem"></a>
+      @yield('profile')
     </div>
     <div class="col-4">
-      <a class="nav-link" href="/stats" style="margin:0 auto;text-align: center"><img src="/images/earth (1).png" class="photo" alt="Statistic" style="width:3.5rem;margin-top:0.25rem"></a>
+      @yield('stats')
     </div>
   </div>
 </nav>

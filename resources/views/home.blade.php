@@ -1,4 +1,13 @@
 @extends('layout.app')
+@section('home')
+<a class="nav-link" href="/home" style="margin:0 auto;text-align: center"><img src="/images/smile.png" class="photo" alt="Home"></a>
+@endsection
+@section('profile')
+<a class="nav-link" href="/profile" style="margin:0 auto;text-align: center"><img src="/images/profile (3).png" class="photo" alt="Profile" style="width:3.5rem;margin-top:0.25rem"></a>
+@endsection
+@section('stats')
+<a class="nav-link" href="/stats" style="margin:0 auto;text-align: center"><img src="/images/earth (2).png" class="photo" alt="Profile" style="width:3.5rem;margin-top:0.25rem"></a>
+@endsection
 @section('content')
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
@@ -27,7 +36,7 @@
   </div>
   <div class="post">
       <div class="featured-article">
-        <a href="#" class="photo">
+        <a href="/post/1" class="photo">
           <img src="http://placehold.it/482x350" alt="" class="thumb">
         </a>
         <div class="block-title">

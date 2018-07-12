@@ -1,4 +1,13 @@
 @extends('layout.app')
+@section('home')
+<a class="nav-link" href="/home" style="margin:0 auto;text-align: center"><img src="/images/smile.png" class="photo" alt="Home"></a>
+@endsection
+@section('profile')
+<a class="nav-link" href="/profile" style="margin:0 auto;text-align: center"><img src="/images/profile (3).png" class="photo" alt="Profile" style="width:3.5rem;margin-top:0.25rem"></a>
+@endsection
+@section('stats')
+<a class="nav-link" href="/stats" style="margin:0 auto;text-align: center"><img src="/images/earth (2).png" class="photo" alt="Profile" style="width:3.5rem;margin-top:0.25rem"></a>
+@endsection
 @section('content')
 	<div class="white mt-2 p-2" style="width:100%">
 		<img src="/images/setwalls.ru-9422.jpg" alt="" class="img-fluid">
