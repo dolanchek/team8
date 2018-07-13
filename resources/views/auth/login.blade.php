@@ -1,11 +1,29 @@
 @extends('layouts.app')
 
 @section('content')
+<nav class="navbar navbar-expand navbar-light mb-3" style="background:white;height:3rem;">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                  <img src="/images/settings (1).png" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="mx-auto order-2">
+        <a class="navbar-brand mx-auto orange-text" style="font-weight: 450 !important;font-size:3.3vh" href="#">Register</a>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+        </ul>
+    </div>
+</nav>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header orange"><b style="font-size: 1.2rem">{{ __('Login') }}</b></div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
@@ -51,7 +69,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn orange">
                                     {{ __('Login') }}
                                 </button>
 

@@ -8,6 +8,8 @@ html{
 	height:100%;
 }
 body{
+	padding:0 !important;
+	margin:0 !important;
 	height:100%;
 	background-color: #eaeaea !important;
 	font-family: 'Roboto',Arial, sans-serif;
@@ -133,14 +135,26 @@ hr{
 .sml-12{
 	margin-left:12.5%;
 }
-.w-75{
-	width:75%;
+.w-80{
+	width:80% !important;
+}
+.w-90{
+	width:93% !important;
+}
+.w-74{
+	width:74% !important;
 }
 .w-65{
 	width:65% !important;
 }
 .w-10{
 	width:10% !important;
+}
+.w-20{
+	width:20% !important;
+}
+.w-24{
+	width:24% !important;
 }
 .prof-main{
 	padding-top:1vh;
@@ -173,8 +187,16 @@ hr{
 	padding:0.2rem;
 	height:1.8rem !important;
 }
+.elem-center{
+	margin:0 auto !important;
+}
 .white-text{
 	color:white !important;
+}
+.btn-wide{
+	padding:0.25rem !important;
+	padding-left:5rem !important;
+	padding-right:5rem !important;
 }
 .low-bold{
 	font-size: 3vh;
@@ -243,16 +265,18 @@ hr{
 	display: block;
 }
 .overlay{
+	position:relative;
+	border-radius: 0.75rem;
 	background:white;
-	border:0.25rem solid orange;
-	margin-left: 5%;
-	width:90%;
-	margin-top: 20%;
+	border:0.4rem solid orange;
+	left: 13%;
+	width:74%;
+	top: 10%;
 	height:60%;
 }
 .darker{
 	background:rgba(0,0,0,0.5);
-	position: absolute;
+	position: fixed;
 	top:0;
 	left:0;
 	height:100%;

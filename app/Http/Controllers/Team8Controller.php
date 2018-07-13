@@ -25,4 +25,7 @@ class Team8Controller extends Controller
     public function splash(){
         return view('splash_screen');
     }
+    public function donate(Request $req){
+        echo $req->cash;
+    }
 }

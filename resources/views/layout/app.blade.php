@@ -25,7 +25,7 @@
     </div>
   </nav>
 </div>
-<nav class="navbar navbar-expand navbar-light p-0 fixed-bottom sticky-bottom" style="background:white;border-bottom:#232323 solid 2rem;padding-bottom: 0.25rem !important;padding-top: 0.25rem !important;z-index: 20 !important;">
+<nav class="navbar navbar-expand navbar-light p-0 fixed-bottom sticky-bottom" style="background:white;border-bottom:#232323 solid 1rem;padding-bottom: 0.25rem !important;padding-top: 0.25rem !important;z-index: 20 !important;">
   <div class="row no-gutters w-100">
     <div class="col-4">
       @yield('home')

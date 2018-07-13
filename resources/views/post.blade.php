@@ -42,17 +42,26 @@
 	</div>
 	<div class="mt-2 p-3 white text-content">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque praesentium, laudantium aspernatur quos doloremque optio distinctio, veniam voluptatum ipsa molestiae quidem aut doloribus animi. Explicabo obcaecati quisquam nobis earum porro?</p>
-		<button type="button" class="btn btn-don btn-relax px-9 mt-5 darkgrey-text">Donate</button>
+		<button type="button" class="btn btn-don btn-relax px-9 mt-5 darkgrey-text" id="donate">Donate</button>
 	</div>
 @include('layout.blank')
 <script>
+    var btne = document.getElementById("cancel");
+    var darker = document.querySelector(".darker");
+    var donatebtn = document.getElementById(".donate");
+    btne.onclick = function(){
+        darker.style.display = "none";
+    };
+    darker.style.display="none";
+    donate.onclick = function(){
+    	darker.style.display = "block";
+    };
 	var secretphoto = document.querySelector(".secret-photo");
 	var onesecret = document.querySelector(".secret");
 	var offsetWidth = onesecret.offsetWidth;
 	var a = Math.round(secretphoto.offsetHeight / offsetWidth) * 12;
-	console.log(a);
 	if(Number.isInteger(a / 12) == false){
-		if(a % 12 > 6){
+		if((a % 12) > 6){
 			console.log("true");
 			a = a + (a % 12);
 			console.log(a);

@@ -5,7 +5,7 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">
-                  <img src="/images/settings.png" alt="">
+                  <img src="/images/settings (1).png" alt="">
                 </a>
             </li>
         </ul>
@@ -24,7 +24,7 @@
   	</div>
   	<div class="col-7 offset-1 pl-2 border-l">
   		<h5 class="prof-input mt-5 darkgrey-text">Оконешникова</h5>
-  		<h5 class="prof-input darkgrey-text">Виолетта</h5>
+  		<h5 class="prof-input darkgrey-text">{{ Auth::user()->name }}</h5>
   		<h5 class="prof-input darkgrey-text">ltp-team@gmail.com</h5>
   	</div>
     </div>

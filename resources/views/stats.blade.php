@@ -5,7 +5,7 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">
-                  <img src="/images/settings.png" alt="">
+                  <img src="/images/settings (1).png" alt="">
                 </a>
             </li>
         </ul>
