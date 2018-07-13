@@ -40,5 +40,13 @@ class Team8Controller extends Controller
             $post->update(['paid' => $cash,'donaters' => $donaters]);
         }
         return redirect('/post/'.$id);
+        /*$cash = $cash + $req->cash;
+        /*$fakearray = "[".$req->cash."]";
+        if($cash > $post->amount){
+            $post->update(['finale' => 1,'paid' => $cash,'donaters' => $donaters]);
+        } else{
+            $post->update(['paid' => $cash,'donaters' => $donaters]);
+        }
+        return redirect('/post/'.$id);*/
     }
 }

@@ -77,6 +77,8 @@
 	var secretphoto = document.querySelector(".secret-photo");
 	var onesecret = document.querySelector(".secret");
 	var offsetWidth = onesecret.offsetWidth;
+	var amounted = document.getElementById("amounted");
+	onesecret.remove();
 	var a = Math.round(secretphoto.offsetHeight / offsetWidth) * 12;
 	if(Number.isInteger(a / 12) == false){
 		if((a % 12) > 6){
@@ -89,18 +91,39 @@
 			console.log(a);
 		}
 	}
-	for(var i=0;i < a-1; i++){
+
+	var selectedFragments = [];
+	var openedFragments = JSON.parse(localStorage.getItem('selectedFragments'));
+	var phpamount = document.getElementById("phpamount");
+	for(var i=0;i < a; i++){
 		var div = document.createElement('div');
 		div.className = "col-1 secret no-white";
-
+		div.setAttribute("id", i);
 		secretphoto.appendChild(div);
 	}
 	var secrets = document.querySelectorAll(".secret");
+	if(openedFragments != null){
+		for (var i = 0; i < openedFragments.length; i++) {
+			console.log(secrets[openedFragments[i]]);
+			secrets[openedFragments[i]].style.opacity = 0;
+		}
+	}
 	for(var i=0;i < secrets.length; i++){
 		secrets[i].style.height = offsetWidth + "px";
 		secrets[i].onclick = function(){
-			this.style.backgroundColor = "green";
+				console.log(selectedFragments);
+				this.style.backgroundColor = "green";
+				selectedFragments[selectedFragments.length] = this.getAttribute("id");
+				var amountcash = selectedFragments.length * 5;
+				amounted.innerHTML = "Donate amount: $" + amountcash;
+				phpamount.setAttribute("value",amountcash);
+				console.log(localStorage.getItem('selectedFragments')+JSON.stringify(selectedFragments));
+				localStorage.setItem('selectedFragments',JSON.stringify(selectedFragments));
+			/*var amountcash = selectedFragments.length * 5;
+			amounted.innerHTML = "Donate amount: $" + amountcash;
+			phpamount.setAttribute("value",selectedFragments);*/
 		}
 	}
 </script>
+
 @endsection

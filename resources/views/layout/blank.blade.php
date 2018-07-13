@@ -20,8 +20,8 @@
             <li class="nav-item dropdown">
                 <form action="/donate/{{$post->id}}" method="post">
                     @csrf
-                    <p class="orange-text text-center" style="font-size: 1.3rem"><b>Donate money:</b></p>
-                    <input id="cash" type="number" name="cash" style="margin-left:10%;width:80%;" required>
+                    <p class="orange-text text-center" style="font-size: 1.3rem" id="amounted"><b>Donate amount: $0.00</b></p>
+                    <input name="cash" value="0" type="hidden" id="phpamount" />
                     <button type="submit" class="btn orange" style="margin-left:33%;width:35% !important;margin-top: 50%;">
                         {{ __('Donate') }}
                     </button>
