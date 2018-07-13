@@ -13,12 +13,12 @@ class PostsTableSeeder extends Seeder
     public function run()
     {
     	Post::create([
-    		"name" => "mongolia",
-    		"content" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque praesentium, laudantium aspernatur quos doloremque optio distinctio, veniam voluptatum ipsa molestiae quidem aut doloribus animi. Explicabo obcaecati quisquam nobis earum porro?",
-    		"amount" => 50000,
-    		"paid" => 31000,
+    		"name" => "Mongolia",
+    		"content" => "Mongolia is a country in East Asia. It is bordered by Russia to the North and china to the East, South and West. It is one of the largest landlocked countries in the world",
+    		"amount" => 800,
+    		"paid" => 687.16,
     		"image" => "images/volunteering-in-mongolia.1200.jpg",
-    		"donaters" => 13000,
+    		"donaters" => 14263,
     		"finale" => 0,
     	]);
     }

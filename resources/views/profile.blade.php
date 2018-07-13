@@ -21,14 +21,14 @@
 <div class="row no-gutters prof-main white">
     @guest
         <ul class="navbar-nav mx-auto mb-5">
-            <img src="/images/Крутая версия/Untitled.png" alt="" class="w-24 rounded my-4" style="margin:0 auto">
-            <h4 class="mb-5">You not autorizated.</h4>
+            <img src="/images/Крутая версия/direction-sign (1).png" alt="" class="w-40 rounded my-4 mb-5" style="margin:0 auto">
+            <h4 class="mb-3 mt-3" style="width:80%;margin-left:10%">You not autorizated. Please, log in or register.</h4>
           <li class="nav-item elem-center">
-                <a class="nav-link" href="{{ route('register') }}"><button class="btn btn-wide darkgrey-text little-bold" style="background-color: lightgrey" type="button">{{ __('Register') }}</button></a>
+                <a class="nav-link" href="{{ route('register') }}"><button class="btn orange btn-wide darkgrey-text little-bold" style="background-color: lightgrey;font-weight: 500" type="button">{{ __('Register') }}</button></a>
             </li>
             <hr class="elem-center my-2 w-74" style="border-top-width: 1.5rem;">
           <li class="nav-item elem-center">
-                <a class="nav-link" href="{{ route('login') }}"><button class="btn btn-wide w-100 darkgrey-text little-bold" style="background-color: lightgrey;" type="button">{{ __('Login') }}
+                <a class="nav-link" href="{{ route('login') }}"><button class="btn orange btn-wide w-100 darkgrey-text little-bold" style="background-color: lightgrey;font-weight: 500" type="button">{{ __('Login') }}
                 </button></a>
           </li>
         </ul>
@@ -66,7 +66,7 @@
     </div>
 @endsection
 @section('home')
-<a class="nav-link" href="/home" style="margin:0 auto;text-align: center"><img src="/images/Untitled (5).png" class="photo" alt="Home"></a>
+<a class="nav-link" href="/post/1" style="margin:0 auto;text-align: center"><img src="/images/Untitled (5).png" class="photo" alt="Home"></a>
 @endsection
 @section('profile')
 <a class="nav-link" href="/profile" style="margin:0 auto;text-align: center"><img src="/images/profile.png" class="photo" alt="Profile" style="width:3.5rem;margin-top:0.25rem"></a>

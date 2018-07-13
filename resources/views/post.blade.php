@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('home')
-<a class="nav-link" href="/home" style="margin:0 auto;text-align: center"><img src="/images/Untitled (4).png" class="photo" alt="Home"></a>
+<a class="nav-link" href="/post/1" style="margin:0 auto;text-align: center"><img src="/images/Untitled (4).png" class="photo" alt="Home"></a>
 @endsection
 @section('profile')
 <a class="nav-link" href="/profile" style="margin:0 auto;text-align: center"><img src="/images/profile (3).png" class="photo" alt="Profile" style="width:3.5rem;margin-top:0.25rem"></a>
@@ -9,10 +9,28 @@
 <a class="nav-link" href="/stats" style="margin:0 auto;text-align: center"><img src="/images/earth (2).png" class="photo" alt="Profile" style="width:3.5rem;margin-top:0.25rem"></a>
 @endsection
 @section('content')
+<nav class="navbar navbar-expand navbar-light mb-3" style="background:white;height:3rem;">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                  <img src="/images/settings (1).png" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="mx-auto order-2">
+        <a class="navbar-brand mx-auto orange-text" style="font-weight: 450 !important;font-size:3.3vh" href="#">My Profile</a>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+        </ul>
+    </div>
+</nav>
 	<div class="mt-2 secret-photo w-100 row no-gutters">
 		<div class="col-1 no-white secret"></div>
 	</div>
-	<h5 class="description text-center p-1 mt-2">{{$post->name}}</h5>
+	<h5 class="description text-center p-1 mt-2">{{$post->name}} village</h5>
 	<div class="progress">
 	  <div class="progress-bar" role="progressbar" aria-valuenow="70"
 	  aria-valuemin="0" aria-valuemax="100" style="width:{{$post->paid/($post->amount/100)}}%">

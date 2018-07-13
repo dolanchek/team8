@@ -9,19 +9,19 @@
     <script type="text/javascript">
             $('#splash').ready() 
             {
-                $('#main').load('/home');
+                $('#main').load('/post/1');
                 setTimeout(function() {
                     $('#main').ready(function() {
                         $('#splash').remove();
-                        window.location.href = "/home";
+                        window.location.href = "/post/1";
                     });
                 }, 1000);
             }
     </script>
 </head>
 <body>
-    <div id="splash" style="position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 10;">
-        <img src="/images/Untitled.png" alt="" class="w-75 sml-12">
+    <div id="splash" style="position: absolute;width:100%;height:100%; top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 10;background-image: url('/images/Крутая версия/input.png')">
+        
     </div>
     <div id="sp_main">
 

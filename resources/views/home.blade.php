@@ -31,20 +31,26 @@
   </a>
 </div>
 <div class="w-100" category="active">
-  <div class="don-category mt-2">
-    <h5>Сбор средств</h5>
+  <div class="don-category mt-2 ">
+    <h4>Fundraising villages</h4>
   </div>
   @foreach($posts as $post)
-    <div class="post">
+    <div class="post white mt-2">
         <div class="featured-article">
           <a href="/post/{{$post->id}}" class="photo">
             <img src="/{{$post->image}}" alt="" class="thumb">
           </a>
-          <div class="block-title">
-            <h6 class="orange-text" style="font-weight: 800;font-size:1.2rem">[Village] - {{$post->name}}</h6>
-            <h6 class="float-right">{{$post->name}}</h6>
-          </div>
         </div>
+          <div class="block-title">
+            <h6 class="orange-text p-2 rounded" style="font-size:1.2rem;text-align: center;background-color:#eee;border-radius: 1.3rem">{{$post->name}} village</h6>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100" style="width:{{$post->paid/($post->amount/100)}}%">
+              
+            </div>
+            <h6 style="position:absolute;left:45%">{{$post->paid/($post->amount/100)}}%</h6>
+          </div>
     </div>
   @endforeach
 </div>

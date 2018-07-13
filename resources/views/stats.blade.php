@@ -18,8 +18,8 @@
         </ul>
     </div>
 </nav>
-<div class="w-100 py-3 mt-3 white">
-	<img src="/images/earth-png-1600 (1).png" class="stats-earth" alt="">
+<div class="w-100 py-2 mt-3 white">
+	<img src="/images/Крутая версия/earth (2).png" class="w-100" alt="">
 </div>
 <div class="container mt-2">
 	<div class="row white no-gutters col-relax col-inrelax p-2 mt-2">
@@ -36,7 +36,7 @@
 		<div class="col-6">
 			<p class="low-bold">Mongolian Village</p>
 			<hr class="my-1" style="width:95%;">
-			<p class="grey-text little-bold">In process</p>
+			<p class="grey-text little-bold"></p>
 		</div>
 		<div class="col-6">
 			<button type="button" class="btn orange w-100 white-text" style="position: absolute;bottom: 0;">More details</button>
@@ -55,7 +55,7 @@
 </div>
 @endsection
 @section('home')
-<a class="nav-link" href="/home" style="margin:0 auto;text-align: center"><img src="/images/Untitled (5).png" class="photo" alt="Home"></a>
+<a class="nav-link" href="/post/1" style="margin:0 auto;text-align: center"><img src="/images/Untitled (5).png" class="photo" alt="Home"></a>
 @endsection
 @section('profile')
 <a class="nav-link" href="/profile" style="margin:0 auto;text-align: center"><img src="/images/profile (3).png" class="photo" alt="Profile" style="width:3.5rem;margin-top:0.25rem"></a>
