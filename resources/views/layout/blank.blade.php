@@ -28,7 +28,8 @@
                 </form>
             </li>
             @endguest
+            <button class="btn btn-primary mt-3" style="width:18%;margin:0 auto;" id="cancel">Cancel</button>
         </ul>
-            <button class="btn btn-primary" style="position: absolute;left:35%;bottom:0" id="cancel">Cancel</button>
+            
 	</div>
 </div>
