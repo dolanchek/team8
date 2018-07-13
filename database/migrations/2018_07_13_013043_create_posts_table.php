@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration
             $table->integer('amount');
             $table->integer('paid');
             $table->integer('donaters');
+            $table->integer('finale');
             $table->timestamps();
         });
     }

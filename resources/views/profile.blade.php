@@ -19,34 +19,51 @@
     </div>
 </nav>
 <div class="row no-gutters prof-main white">
+    @guest
+        <ul class="navbar-nav mx-auto mb-5">
+            <img src="/images/Крутая версия/Untitled.png" alt="" class="w-24 rounded my-4" style="margin:0 auto">
+            <h4 class="mb-5">You not autorizated.</h4>
+          <li class="nav-item elem-center">
+                <a class="nav-link" href="{{ route('register') }}"><button class="btn btn-wide darkgrey-text little-bold" style="background-color: lightgrey" type="button">{{ __('Register') }}</button></a>
+            </li>
+            <hr class="elem-center my-2 w-74" style="border-top-width: 1.5rem;">
+          <li class="nav-item elem-center">
+                <a class="nav-link" href="{{ route('login') }}"><button class="btn btn-wide w-100 darkgrey-text little-bold" style="background-color: lightgrey;" type="button">{{ __('Login') }}
+                </button></a>
+          </li>
+        </ul>
+    @else
   	<div class="col-4">
   		<img src="/images/user.jpg" alt="User-photo" class="rounded ml-2" style="height:13.5rem">
   	</div>
-  	<div class="col-7 offset-1 pl-2 border-l">
-  		<h5 class="prof-input mt-5 darkgrey-text">Оконешникова</h5>
+  	<div class="col-7 offset-1 pl-2">
+  		<h5 class="prof-input mt-4 darkgrey-text">Оконешников</h5>
   		<h5 class="prof-input darkgrey-text">{{ Auth::user()->name }}</h5>
   		<h5 class="prof-input darkgrey-text">ltp-team@gmail.com</h5>
+    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><button type="button" class="float-right mr-2 mt-2 btn btn-primary">Logout</button></a>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
   	</div>
     </div>
     <div class="container">
     <div class="white p-2 my-2 col-relax col-inrelax">
       <h5 class="grey-text">Total paid:<p class="float-right orange-text">$320.5</p></h5>
     </div>
-    <table class="table white table-relax col-inrelax ">
+    <table class="table white table-relax col-inrelax">
       <tbody style="">
         <tr style="background-color: orange;border-top-left-radius: 3rem;border-top-right-radius: 3rem;">
-          <th scope="col">Время</th>
-          <th scope="col">Деревня</th>
-          <th scope="col">Сумма</th>
+          <th scope="col">Time</th>
+          <th scope="col">Village</th>
+          <th scope="col">Paid</th>
         </tr>
         <tr>
           <td>9:25 </td>
-          <td>Монгольская деревня </td>
+          <td>Mongolian village</td>
           <td>$215</td>
         </tr>
       </tbody>
-    </table>
-</div>
+    </table> 
+        @endguest
+    </div>
 @endsection
 @section('home')
 <a class="nav-link" href="/home" style="margin:0 auto;text-align: center"><img src="/images/Untitled (5).png" class="photo" alt="Home"></a>

@@ -18,25 +18,17 @@
             </div>
             @else
             <li class="nav-item dropdown">
-                <form action="POST" method="/donate">
+                <form action="/donate/{{$post->id}}" method="post">
                     @csrf
                     <p class="orange-text text-center" style="font-size: 1.3rem"><b>Donate money:</b></p>
-                    <input id="cash" type="text" class="form-control{{ $errors->has('cash') ? ' is-invalid' : '' }}" name="cash" required>
-                    <!--<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>{{ Auth::user()->name }} <span class="caret"></span></a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                    </div>-->
-                    <a href="/donate">
-                        <button type="submit" class="btn orange">
-                            {{ __('Donate') }}
-                        </button>
-                    </a>
+                    <input id="cash" class="elem-center" type="number" name="cash" required>
+                    <button type="submit" class="btn orange elem-center">
+                        {{ __('Donate') }}
+                    </button>
                 </form>
             </li>
             @endguest
+        </ul>
             <button class="btn btn-primary" style="position: absolute;left:35%;bottom:0" id="cancel">Отмена</button>
 	</div>
 </div>

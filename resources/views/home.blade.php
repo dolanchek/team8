@@ -32,18 +32,20 @@
 </div>
 <div class="w-100" category="active">
   <div class="don-category mt-2">
-    <h5>В активной разработке</h5>
+    <h5>Сбор средств</h5>
   </div>
-  <div class="post">
-      <div class="featured-article">
-        <a href="/post/1" class="photo">
-          <img src="http://placehold.it/482x350" alt="" class="thumb">
-        </a>
-        <div class="block-title">
-          <h6>Lorem ipsum dolor asit amet</h6>
-          <p class="by-author"><small>By Jhon Doe</small></p>
+  @foreach($posts as $post)
+    <div class="post">
+        <div class="featured-article">
+          <a href="/post/{{$post->id}}" class="photo">
+            <img src="/{{$post->image}}" alt="" class="thumb">
+          </a>
+          <div class="block-title">
+            <h6 class="orange-text" style="font-weight: 800;font-size:1.2rem">[Village] - {{$post->name}}</h6>
+            <h6 class="float-right">{{$post->name}}</h6>
+          </div>
         </div>
-      </div>
-  </div>
+    </div>
+  @endforeach
 </div>
 @endsection

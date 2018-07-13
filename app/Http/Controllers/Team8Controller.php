@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Request;
+use App\Post;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
 class Team8Controller extends Controller
@@ -11,10 +12,12 @@ class Team8Controller extends Controller
         return redirect('redirect');
     }
     public function post($id){
-        return view('post');
+        $post = Post::find($id);
+        return view('post',compact('id'),compact('post'));
     }
     public function home(){
-        return view('home');
+        $posts = Post::all();
+        return view('home',compact('posts'));
     }
     public function profile(){
         return view('profile');
@@ -25,7 +28,17 @@ class Team8Controller extends Controller
     public function splash(){
         return view('splash_screen');
     }
-    public function donate(Request $req){
-        echo $req->cash;
+    public function donate(Request $req,$id){
+        $post = Post::find($id);
+        $cash = $post->paid;
+        $cash = $cash + $req->cash;
+        $donaters = $post->donaters;
+        $donaters = $donaters + 1;
+        if($cash > $post->amount){
+            $post->update(['finale' => 1,'paid' => $cash,'donaters' => $donaters]);
+        } else{
+            $post->update(['paid' => $cash,'donaters' => $donaters]);
+        }
+        return redirect('/post/'.$id);
     }
 }
