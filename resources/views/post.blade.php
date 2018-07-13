@@ -36,7 +36,11 @@
 	  aria-valuemin="0" aria-valuemax="100" style="width:{{$post->paid/($post->amount/100)}}%">
 	    
 	  </div>
-	  <h6 style="position:absolute;left:45%">{{$post->paid/($post->amount/100)}}%</h6>
+	  @if($post->finale == "1")
+	  	<h6 style="position:absolute;left:35%">Thanks for donate</h6>
+	  @else
+	 	<h6 style="position:absolute;left:45%">{{$post->paid/($post->amount/100)}}%</h6>
+	  @endif
 	</div>
 	<div class="row mt-2" style="width:96%;margin-left:2%;">
 		<div class="col-4 darkgrey-text white col-relax">
@@ -59,26 +63,35 @@
 		</div>
 	</div>
 	<div class="mt-2 p-3 white text-content">
+		@if($post->finale == "1")
+	  		<p class="lightengrey p-2 mb-2">The collection of money is over, now we are starting to purchase materials and formalize contracts. Thank you for the donation! </p>
+		@endif
 		<p>{{$post->content}}</p>
+		@if($post->finale == "1")
+			<button type="button" class="btn btn-don px-9 mt-5 darkgrey-text">Donate</button>
+		@else
 		<button type="button" class="btn btn-don btn-relax px-9 mt-5 darkgrey-text" id="donate">Donate</button>
+		@endif
 	</div>
 @include('layout.blank')
 <script>
     var btne = document.getElementById("cancel");
     var darker = document.querySelector(".darker");
-    var donatebtn = document.getElementById(".donate");
-    btne.onclick = function(){
-        darker.style.display = "none";
-    };
-    darker.style.display="none";
-    donate.onclick = function(){
-    	darker.style.display = "block";
-    };
-	var secretphoto = document.querySelector(".secret-photo");
+    var donatebtn = document.getElementById("donate");
 	var onesecret = document.querySelector(".secret");
 	var offsetWidth = onesecret.offsetWidth;
 	var amounted = document.getElementById("amounted");
 	onesecret.remove();
+    btne.onclick = function(){
+        darker.style.display = "none";
+    };
+    darker.style.display="none";
+    if(donatebtn != null){
+    	donatebtn.onclick = function(){
+    		darker.style.display = "block";
+    	};
+    }
+	var secretphoto = document.querySelector(".secret-photo");
 	var a = Math.round(secretphoto.offsetHeight / offsetWidth) * 12;
 	if(Number.isInteger(a / 12) == false){
 		if((a % 12) > 6){

@@ -24,9 +24,9 @@
 <div class="container mt-2">
 	<div class="row white no-gutters col-relax col-inrelax p-2 mt-2">
 		<div class="col-6">
-			<p class="low-bold">Mongolian Village</p>
+			<p class="low-bold">Yakutian Village</p>
 			<hr class="my-1" style="width:95%;">
-			<p class="grey-text little-bold">In process</p>
+			<p class="little-bold" style="color:orange">In process</p>
 		</div>
 		<div class="col-6">
 			<button type="button" class="btn orange w-100 white-text" style="position: absolute;bottom: 0;">More details</button>
@@ -36,17 +36,17 @@
 		<div class="col-6">
 			<p class="low-bold">Mongolian Village</p>
 			<hr class="my-1" style="width:95%;">
-			<p class="grey-text little-bold"></p>
+			<p class="little-bold" style="color:#00b900">Fund-raising</p>
 		</div>
 		<div class="col-6">
-			<button type="button" class="btn orange w-100 white-text" style="position: absolute;bottom: 0;">More details</button>
+			<a href="/post/1"><button type="button" class="btn orange w-100 white-text" style="position: absolute;bottom: 0;">More details</button></a>
 		</div>
 	</div>
 	<div class="row white no-gutters col-relax col-inrelax p-2 mt-2">
 		<div class="col-6">
 			<p class="low-bold">Mongolian Village</p>
 			<hr class="my-1" style="width:95%;">
-			<p class="grey-text little-bold">In process</p>
+			<p class="grey-text little-bold">In negotiations</p>
 		</div>
 		<div class="col-6">
 			<button type="button" class="btn orange w-100 white-text" style="position: absolute;bottom: 0;">More details</button>
