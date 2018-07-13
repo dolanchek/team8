@@ -20,7 +20,7 @@
         </ul>
     </div>
     <div class="mx-auto order-2">
-        <a class="navbar-brand mx-auto orange-text" style="font-weight: 450 !important;font-size:3.3vh" href="#">My Profile</a>
+        <a class="navbar-brand mx-auto orange-text" style="font-weight: 450 !important;font-size:3.3vh" href="#">Main</a>
     </div>
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
@@ -40,13 +40,13 @@
 	</div>
 	<div class="row mt-2" style="width:96%;margin-left:2%;">
 		<div class="col-4 darkgrey-text white col-relax">
-			Сумма
+			Amount
 		</div>
 		<div class="col-4 darkgrey-text white col-relax">
-			Оплачено
+			Paid
 		</div>
 		<div class="col-4 darkgrey-text white col-relax col-inrelax">
-			Меценаты
+			Donaters
 		</div>
 		<div class="col-4 mt-1 grey-text white col-relax">
 			${{$post->amount}}

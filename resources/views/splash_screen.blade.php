@@ -20,7 +20,7 @@
     </script>
 </head>
 <body>
-    <div id="splash" style="position: absolute;width:100%;height:100%; top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 10;background-image: url('/images/Крутая версия/input.png')">
+    <div id="splash" style="position: absolute;width:100%;height:100%; background-size:100%;top: 0px; bottom: 0px; left: 0px; right: 0px; z-index: 10;background-image: url('/images/Крутая версия/input.png')">
         
     </div>
     <div id="sp_main">

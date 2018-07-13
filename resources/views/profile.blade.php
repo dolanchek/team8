@@ -34,7 +34,7 @@
         </ul>
     @else
   	<div class="col-4">
-  		<img src="/images/user.jpg" alt="User-photo" class="rounded ml-2" style="height:13.5rem">
+  		<img src="/images/wlsUH6k-TfM.jpg" alt="User-photo" class="rounded ml-2" style="height:13.5rem">
   	</div>
   	<div class="col-7 offset-1 pl-2">
   		<h5 class="prof-input mt-4 darkgrey-text">{{ Auth::user()->surname }}</h5>

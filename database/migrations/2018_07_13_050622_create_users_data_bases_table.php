@@ -16,7 +16,7 @@ class CreateUsersDataBasesTable extends Migration
         Schema::create('users_data_bases', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->json('shifts');
+            $table->integer('total_paid');
         });
     }
 
