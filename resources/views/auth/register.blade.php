@@ -24,12 +24,23 @@
     <div class="row no-gutters">
             @csrf
             <div class="col-5 h-100">
-                <label for="name" style="width:90%;margin-left:10%;background-color: white" class="col-md-4 p-2  rounded col-form-label text-md-right mt-1">{{ __('Name') }}</label>
+                <label for="surname" style="width:90%;margin-left:10%;background-color: white" class="col-md-4 p-2  rounded col-form-label text-md-right mt-1">{{ __('Surname') }}</label>
+                <label for="name" style="width:90%;margin-left:10%;background-color: white" class="col-md-4 p-2  rounded col-form-label text-md-right mt-3">{{ __('Name') }}</label>
                 <label for="email" style="width:90%;margin-left:10%;background-color: white" class="col-md-4 p-2 rounded col-form-label text-md-right mt-4">{{ __('E-Mail') }}</label>
                 <label for="password" style="width:90%;margin-left:10%;background-color: white" class="col-md-4 p-2 rounded col-form-label text-md-right mt-4">{{ __('Password') }}</label>
                 <label for="password-confirm" style="width:90%;margin-left:10%;background-color: white;" class="col-md-4 p-2 rounded col-form-label text-md-right mt-3">{{ __('Confirm Password')}}</label>
             </div>
             <div class="col-7">
+                <div class="form-group row mt-1 no-gutters">
+                    <div class="col-md-6">
+                        <input id="surname" type="text" class="form-control{{ $errors->has('surname') ? ' is-invalid' : '' }}" name="surname" value="{{ old('surname') }}" required autofocus style="width:85%;margin-left:10%">
+                        @if ($errors->has('surname'))
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('surname') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
                 <div class="form-group row mt-1 no-gutters">
                     <div class="col-md-6">
                         <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus style="width:85%;margin-left:10%">

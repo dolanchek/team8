@@ -37,9 +37,9 @@
   		<img src="/images/user.jpg" alt="User-photo" class="rounded ml-2" style="height:13.5rem">
   	</div>
   	<div class="col-7 offset-1 pl-2">
-  		<h5 class="prof-input mt-4 darkgrey-text">Оконешников</h5>
+  		<h5 class="prof-input mt-4 darkgrey-text">{{ Auth::user()->surname }}</h5>
   		<h5 class="prof-input darkgrey-text">{{ Auth::user()->name }}</h5>
-  		<h5 class="prof-input darkgrey-text">ltp-team@gmail.com</h5>
+  		<h6 class="prof-input darkgrey-text">{{ Auth::user()->email }}</h6>
     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><button type="button" class="float-right mr-2 mt-2 btn btn-primary">Logout</button></a>
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
   	</div>

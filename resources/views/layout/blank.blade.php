@@ -21,8 +21,8 @@
                 <form action="/donate/{{$post->id}}" method="post">
                     @csrf
                     <p class="orange-text text-center" style="font-size: 1.3rem"><b>Donate money:</b></p>
-                    <input id="cash" class="elem-center" type="number" name="cash" required>
-                    <button type="submit" class="btn orange elem-center">
+                    <input id="cash" type="number" name="cash" style="margin-left:10%;width:80%;" required>
+                    <button type="submit" class="btn orange" style="margin-left:33%;width:35% !important;margin-top: 50%;">
                         {{ __('Donate') }}
                     </button>
                 </form>
