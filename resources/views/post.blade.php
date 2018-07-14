@@ -39,7 +39,13 @@
 	  @if($post->finale == "1")
 	  	<h6 style="position:absolute;left:35%">Thanks for donate</h6>
 	  @else
-	 	<h6 style="position:absolute;left:45%">{{$post->paid/($post->amount/100)}}%</h6>
+	 	<h6 style="position:absolute;left:45%" id="linkin">{{$post->paid/($post->amount/100)}}</h6>
+	 	<script type="text/javascript">
+	 			var linkin = document.getElementById("linkin");
+	 			var result = Number(linkin.innerHTML);
+	 			result = Math.round(result);
+	 			linkin.innerHTML = result + "%";
+	 	</script>
 	  @endif
 	</div>
 	<div class="row mt-2" style="width:96%;margin-left:2%;">
@@ -73,6 +79,54 @@
 		<button type="button" class="btn btn-don btn-relax px-9 mt-5 darkgrey-text" id="donate">Donate</button>
 		@endif
 	</div>
+	<div class="white rounded p-1 mt-3" style="margin-left:3%;width:94%">
+		<header class="w-100 p-1">
+			<h3 style="display:inline-block;">Tweets</h3> by <a href="#">@lighTry</a>
+			<hr>
+			<div style="height:10rem; overflow: scroll">
+				<div class="row white no-gutters col-relax col-inrelax p-2 mt-2 mb-5" style="background:#eee !important">
+					<div class="col-12">
+						<img src="/images/Untitled (4).png" alt="" style="width:10%">
+					</div>
+					<div class="col-12">
+						<p class="low-bold" style="color:#007bff">Three post</p>
+						<p class="grey-text float-right">12 may, 14:12 p.m.</p>
+					</div>
+					<hr class="my-1" style="width:95%;">
+					<div class="col-12">
+						<p class="little-bold grey-text">Today we added a village !!! Thanks for the support!!! </p>
+					</div>
+				</div>
+				<div class="row white no-gutters col-relax col-inrelax p-2 mt-2 mb-5" style="background:#eee !important">
+					<div class="col-12">
+						<img src="/images/Untitled (4).png" alt="" style="width:10%">
+					</div>
+					<div class="col-12">
+						<p class="low-bold" style="color:#007bff">Second post</p>
+						<p class="grey-text float-right">24 march, 12:33 p.m.</p>
+					</div>
+					<hr class="my-1" style="width:95%;">
+					<div class="col-12">
+						<p class="little-bold grey-text">We agreed with them, soon we will start raising funds. At the moment, there is preparation. </p>
+					</div>
+				</div>
+				<div class="row white no-gutters col-relax col-inrelax p-2 mt-2 mb-5" style="background:#eee !important">
+					<div class="col-12">
+						<img src="/images/Untitled (4).png" alt="" style="width:10%">
+					</div>
+					<div class="col-12">
+						<p class="low-bold" style="color:#007bff">First post</p>
+						<p class="grey-text float-right">13 january, 20:03 p.m.</p>
+					</div>
+					<hr class="my-1" style="width:95%;">
+					<div class="col-12">
+						<p class="little-bold grey-text">From today we begin to negotiate with the appointed village. Maybe they will pass a month, apologize for the inconvenience. </p>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+	
 @include('layout.blank')
 <script>
     var btne = document.getElementById("cancel");
@@ -106,7 +160,11 @@
 	}
 
 	var selectedFragments = [];
-	var openedFragments = JSON.parse(localStorage.getItem('selectedFragments'));
+	var openedFragments;
+	if(localStorage.getItem('selectedFragments') != null && localStorage.getItem('selectedFragments') != ""){
+		openedFragments = JSON.parse(localStorage.getItem('selectedFragments'));
+	}
+	console.log(openedFragments);
 	var phpamount = document.getElementById("phpamount");
 	for(var i=0;i < a; i++){
 		var div = document.createElement('div');
@@ -117,8 +175,9 @@
 	var secrets = document.querySelectorAll(".secret");
 	if(openedFragments != null){
 		for (var i = 0; i < openedFragments.length; i++) {
-			console.log(secrets[openedFragments[i]]);
-			secrets[openedFragments[i]].style.opacity = 0;
+			if(openedFragments[i] != null){
+				secrets[openedFragments[i]].style.opacity = 0;
+			}
 		}
 	}
 	for(var i=0;i < secrets.length; i++){
@@ -130,8 +189,8 @@
 				var amountcash = selectedFragments.length * 5;
 				amounted.innerHTML = "Donate amount: $" + amountcash;
 				phpamount.setAttribute("value",amountcash);
-				console.log(localStorage.getItem('selectedFragments')+JSON.stringify(selectedFragments));
-				localStorage.setItem('selectedFragments',JSON.stringify(selectedFragments));
+				console.log(selectedFragments.concat(openedFragments));
+				localStorage.setItem('selectedFragments',JSON.stringify(selectedFragments.concat(openedFragments)));
 			/*var amountcash = selectedFragments.length * 5;
 			amounted.innerHTML = "Donate amount: $" + amountcash;
 			phpamount.setAttribute("value",selectedFragments);*/

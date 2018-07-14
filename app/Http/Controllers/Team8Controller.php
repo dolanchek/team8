@@ -23,7 +23,8 @@ class Team8Controller extends Controller
         return view('profile');
     }
     public function statistic(){
-        return view('stats');
+        $posts = Post::all();
+        return view('stats',compact('posts'));
     }
     public function splash(){
         return view('splash_screen');
@@ -48,5 +49,26 @@ class Team8Controller extends Controller
             $post->update(['paid' => $cash,'donaters' => $donaters]);
         }
         return redirect('/post/'.$id);*/
+    }
+    public function settings(){
+        return view('settings');
+    }
+    public function admin(){
+        return view('adminAdd');
+    }
+    public function createPost(){
+        return view('addPost');
+    }
+    public function UploadPost(Request $req){
+        $post = Post::create([
+            "name" => $req->name,
+            "content" => $req->content,
+            "amount" => $req->amount,
+            "image" => $req->image,
+            "donaters" => 0,
+            "paid" => 0,
+            "finale" => 0
+        ]);
+        return redirect('/stats');
     }
 }

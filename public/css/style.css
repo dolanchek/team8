@@ -25,7 +25,7 @@ hr{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	min-height:30vh;
+	min-height:30vh !important;
 }
 .secret{
 	border:1px solid black;
@@ -156,6 +156,9 @@ hr{
 }
 .w-40{
 	width:40% !important;
+}
+.w-35{
+	width:35% !important;
 }
 .w-10{
 	width:10% !important;
@@ -292,4 +295,9 @@ hr{
 	height:100%;
 	width:100%;
 	z-index: 9999;
+}
+@media (min-width: 568px) {
+	.secret-photo{
+		min-height:80vh !important;
+	}
 }

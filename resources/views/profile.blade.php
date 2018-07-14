@@ -15,6 +15,11 @@
     </div>
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/addAdmin">
+                  <img src="/images/Крутая версия/admin.png" style="width:38px;height:38px" alt="">
+              </a>
+            </li>
         </ul>
     </div>
 </nav>

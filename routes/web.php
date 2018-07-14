@@ -17,7 +17,11 @@ Route::get('/post/{id}', 'Team8Controller@post');
 Route::get('/home', 'Team8Controller@home');
 Route::get('/profile', 'Team8Controller@profile');
 Route::get('/stats', 'Team8Controller@statistic');
+Route::get('/settings', 'Team8Controller@settings');
 Route::post('/donate/{id}', 'Team8Controller@donate');
+Route::get('/addAdmin', 'Team8Controller@admin');
+Route::get('/addPost', 'Team8Controller@createPost');
+Route::post('/redirect-vil', 'Team8Controller@uploadPost');
 
 Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');

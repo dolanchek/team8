@@ -22,29 +22,34 @@
 	<img src="/images/Крутая версия/earth (2).png" class="w-100" alt="">
 </div>
 <div class="container mt-2">
-	<div class="row white no-gutters col-relax col-inrelax p-2 mt-2">
-		<div class="col-6">
-			<p class="low-bold">Yakutian Village</p>
-			<hr class="my-1" style="width:95%;">
-			<p class="little-bold" style="color:orange">In process</p>
-		</div>
-		<div class="col-6">
-			<button type="button" class="btn orange w-100 white-text" style="position: absolute;bottom: 0;">More details</button>
-		</div>
+	<div id="empty" class="w-100">
+		
 	</div>
+	<script>
+		var empty = document.getElementById("empty");
+		if(localStorage.getItem("Admin") == "true"){
+			empty.innerHTML = '<a href="/addPost"><div class="w-100 lightgrey p-1"><img src="/images/Крутая версия/add.png" class="w-10"style="margin-left:45%" alt=""></div></a>';
+		}
+	</script>
+	@foreach($posts as $post)
+		<div class="row white no-gutters col-relax col-inrelax p-2 mt-2">
+			<div class="col-6">
+				<p class="low-bold">{{$post->name}} Village</p>
+				<hr class="my-1" style="width:95%;">
+				@if($post->finale != "0")
+					<p class="little-bold" style="color:#03b503">In process</p>
+				@else 
+					<p class="orange-text little-bold">In fund-raising</p>
+				@endif
+			</div>
+			<div class="col-6">
+				<a href="/post/{{$post->id}}"><button type="button" class="btn orange w-100 white-text" style="position: absolute;bottom: 0;">More details</button></a>
+			</div>
+		</div>
+	@endforeach
 	<div class="row white no-gutters col-relax col-inrelax p-2 mt-2">
 		<div class="col-6">
-			<p class="low-bold">Mongolian Village</p>
-			<hr class="my-1" style="width:95%;">
-			<p class="little-bold" style="color:#00b900">Fund-raising</p>
-		</div>
-		<div class="col-6">
-			<a href="/post/1"><button type="button" class="btn orange w-100 white-text" style="position: absolute;bottom: 0;">More details</button></a>
-		</div>
-	</div>
-	<div class="row white no-gutters col-relax col-inrelax p-2 mt-2">
-		<div class="col-6">
-			<p class="low-bold">Mongolian Village</p>
+			<p class="low-bold">Kazakhstan Village</p>
 			<hr class="my-1" style="width:95%;">
 			<p class="grey-text little-bold">In negotiations</p>
 		</div>

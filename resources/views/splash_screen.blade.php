@@ -9,13 +9,13 @@
     <script type="text/javascript">
             $('#splash').ready() 
             {
-                $('#main').load('/post/1');
+                $('#main').load('/stats');
                 setTimeout(function() {
                     $('#main').ready(function() {
                         $('#splash').remove();
-                        window.location.href = "/post/1";
+                        window.location.href = "/stats";
                     });
-                }, 1000);
+                }, 3000);
             }
     </script>
 </head>
